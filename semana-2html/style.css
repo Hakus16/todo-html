@@ -1,0 +1,254 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+.barra-nav {
+    background: #1a2a3a;
+    padding: 12px 20px;
+    text-align: center;
+    border-bottom: 2px solid #f39c12;
+    margin-bottom: 20px;
+}
+
+.barra-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    margin: 0 5px;
+    font-size: 1rem;
+}
+
+.barra-nav a:hover {
+    background-color: #f39c12;
+    color: #1a2a3a;
+    border-radius: 5px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('fondotrabajo.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* TÍTULO PRINCIPAL */
+body > header {
+    background: linear-gradient(135deg, #1a2a3a, #2c3e50);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+.tarjeta {
+    background-color: #34495E;
+    min-width: 300px;
+    height: 620px;  /* ALTURA FIJA para todas */
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+}
+
+/* FOTO DE PERFIL */
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.foto-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TÍTULOS */
+h1 {
+    color: #ecf0f1;
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.subtitulo {
+    color: #f39c12;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+/* CUERPO - OCUPA EL ESPACIO SOBRANTE */
+.tarjeta-cuerpo {
+    flex: 1;
+    overflow-y: auto;  /* Scroll si el texto es muy largo */
+}
+
+.tarjeta-cuerpo p {
+    text-align: left;
+    color: #e0e0e0;
+    line-height: 1.4;
+    font-size: 0.85rem;
+}
+
+/* HABILIDADES */
+.habilidades {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.tag {
+    background-color: #2c3e50;
+    color: #f39c12;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+/* RECOMPENSA */
+.recompensa {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.recompensa-titulo {
+    display: block;
+    font-size: 0.7rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.recompensa-monto {
+    display: block;
+    font-size: 1rem;
+    color: #ffd700;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+.barra-contacto {
+    background: linear-gradient(135deg, #1a2a3a, #2c3e50);
+    padding: 20px 40px;
+    margin-top: 100px;
+    width: 100%;
+    border-top: 3px solid #f39c12;
+}
+
+.contenido-barra {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.autor {
+    color: #f39c12;
+    font-size: 1.1rem;
+    font-weight: bold;
+    min-width: 180px;
+}
+
+.contactos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    flex: 1;
+    justify-content: center;
+}
+
+.contactos span {
+    color: #bdc3c7;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.contactos span:hover {
+    color: #f39c12;
+    cursor: pointer;
+}
+
+.año {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    min-width: 80px;
+    text-align: right;
+}
+
+
+@media (max-width: 900px) {
+    .barra-contacto {
+        padding: 15px 20px;
+    }
+    
+    .contenido-barra {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .contactos {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .año {
+        text-align: center;
+    }
+}
+.carrusel {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.carrusel-track {
+    display: flex;
+    gap: 20px;
+    animation: mover 20s linear infinite;
+    width: fit-content;
+}
+
+.carrusel:hover .carrusel-track {
+    animation-play-state: paused;
+}
+
+@keyframes mover {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 1rem)); }
+}
+
+
